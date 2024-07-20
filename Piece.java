@@ -10,4 +10,8 @@ public class Piece {
     public String getName() {
         return name;
     }
+
+    public Colour getColour() {
+        return colour;
+    }
 }
