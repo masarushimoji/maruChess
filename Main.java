@@ -11,7 +11,10 @@ public class Main {
         Piece whiteKing = new Piece("king", Colour.WHITE);
         Piece blackKing = new Piece("king", Colour.BLACK);
 
+        
+
         board[0][1] = whiteKing;
+        board[2][1] = blackKing;
         System.out.println(board[0][1].getName());
 
 
