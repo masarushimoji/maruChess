@@ -26,12 +26,12 @@ public class Main {
 
     public static void printBoard() {
         int boardWidth = Board.board.length;
-        for (int i=0; i<boardWidth; i++) {
-            System.out.println();
+        for (int i=0; i<boardWidth; i++) {   
             for (int j=0; j<boardWidth; j++) {
                 if (Board.board[i][j]==null) {System.out.print("[00] ");}
                 else {System.out.print("[" + Board.board[i][j].getName() + "] ");}
             }
+            System.out.println();
         }
     }
 
