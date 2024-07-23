@@ -1,30 +1,15 @@
 import java.util.Scanner;
 
-
-
 public class Main {
-    
-    public static void main(String[] args) {
-      
-        System.out.println("{Welcome to maruChess!!}");
-        System.out.println(Board.board[0][1]);
-
-
+    public static void main(String[] args) {       
         Piece whiteKing = new Piece("bk", Colour.WHITE);
         Piece blackKing = new Piece("wk", Colour.BLACK);
 
-        
-
         Board.board[0][1] = whiteKing;
         Board.board[2][1] = blackKing;
-        System.out.println(Board.board[0][1].getName());
 
+        System.out.println("{Welcome to maruChess!!}");
         menu();
-
-        
-
-
-        
     }
     
     public static void menu() {
@@ -36,9 +21,7 @@ public class Main {
 
         input = scan.nextLine();
         scan.close();
-        if (input.equals("1")) {
-            printBoard();
-        } 
+        if (input.equals("1")) {printBoard();} 
     }
 
     public static void printBoard() {
@@ -46,10 +29,8 @@ public class Main {
         for (int i=0; i<boardWidth; i++) {
             System.out.println();
             for (int j=0; j<boardWidth; j++) {
-                if (Board.board[i][j]==null) {
-                    System.out.print("[00] ");
-                } else {
-                    System.out.print("[" + Board.board[i][j].getName() + "] ");  }
+                if (Board.board[i][j]==null) {System.out.print("[00] ");}
+                else {System.out.print("[" + Board.board[i][j].getName() + "] ");}
             }
         }
     }
