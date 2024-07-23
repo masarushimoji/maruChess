@@ -10,8 +10,8 @@ public class Main {
         System.out.println(Board.board[0][1]);
 
 
-        Piece whiteKing = new Piece("king", Colour.WHITE);
-        Piece blackKing = new Piece("king", Colour.BLACK);
+        Piece whiteKing = new Piece("bk", Colour.WHITE);
+        Piece blackKing = new Piece("wk", Colour.BLACK);
 
         
 
@@ -19,13 +19,15 @@ public class Main {
         Board.board[2][1] = blackKing;
         System.out.println(Board.board[0][1].getName());
 
+        menu();
 
+        
 
 
         
     }
     
-    public void menu() {
+    public static void menu() {
         Scanner scan = new Scanner(System.in);
         String input = "";
         System.out.println("Options:");
@@ -39,12 +41,15 @@ public class Main {
         } 
     }
 
-    public void printBoard() {
+    public static void printBoard() {
         int boardWidth = Board.board.length;
         for (int i=0; i<boardWidth; i++) {
             System.out.println();
             for (int j=0; j<boardWidth; j++) {
-                System.out.print("[" + Board.board[i][j].getName() + "] ");
+                if (Board.board[i][j]==null) {
+                    System.out.print("[00] ");
+                } else {
+                    System.out.print("[" + Board.board[i][j].getName() + "] ");  }
             }
         }
     }
